@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+    position:relative;
+}
+
+body {
+  /**/font: 15px Arial, Helvetica,sans-serif;
+    padding:0;
+    margin: 0;
+    margin-bottom: 60px;
+    background-image: url("../img/fondo.jpg");
+    background-size:cover;
+    /*
+    background: linear-gradient(90deg, #e6e7e8 50%, #d0d0d0 50%);
+    */
+    background-repeat: repeat-y;
+}
+
+header{
+  background: #104d75;
+  color:#ffffff;
+  padding-top:30px;
+  min-height:70px;
+  border-bottom: #1dd50d  5px solid;
+}
+
+header a{
+  color:#ffffff;
+  text-decoration:none;
+  text-transform: uppercase;
+  font-size:100%;
+}
+
+header li{
+  float:left;
+  display:inline;
+  padding: 0 20px 0 20px;
+}
+
+header #marca{
+  float:left;
+
+}
+
+header #marca h1{
+  margin:0;
+}
+
+header nav{
+  float:right;
+  margin-top:1%;
+}
+
+header .resaltado, header .actual a{
+  color:    #1dd50d ;
+  font-weight:bold;
+}
+
+header a:hover{
+  color:#000;
+  font-weight:bold;
+}
+/* Estilos globales */
+.contenedor{
+  width:80%;
+  margin:auto;
+  overflow:hidden;
+  margin-bottom: 1%
+
+}
+.contenedor p{
+
+  color: #000;
+  font-size:  20%;
+
+}
+ul{
+  margin:0;
+  padding:0;
+}
+.center{
+  margin: 0 auto;
+  text-align: center;
+}
+footer{
+  padding: 1.5%;
+  width: 100%;
+  background-color: rgb(108,117,125);
+  box-sizing: border-box;
+  font-weight: bold;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+}
+.cuadroMedio{
+  margin-top: 2%;
+  min-height:99%;
+  margin-left: 33%;
+  border-radius:10%;
+  text-align:center;
+  border: 5px solid  #a21b06;
+  width: 35%;
+  overflow: hidden;
+}
+.cuadroSesion{
+  text-align: center;
+  margin-left: 44%;
+  width: 10%;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.abajologo{
+  margin-left: 20%;
+  margin-top: 2%;
+  margin-right: 20%;
+  font: 110%  tahoma, Helvetica,sans-serif;
+  text-align: justify;
+  color: white;
+}
+.cuadromedioInicioSesion{
+  margin-top: 2%;
+  margin-left: 35%;
+  width: 30%;
+  height: 320px;
+  border-radius: 5%;
+  background-color: white;
+  border-width: 100%;
+  border: 2px solid   #bdadac;
+  overflow:hidden;
+}
+.inicioSesionText{
+  margin-top: 5%;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  font: tahoma, Helvetica,sans-serif;
+  color:#058;
+  font-size: 200%;
+  border-bottom: 5px solid  #bdadac;
+}
+.abajoText{
+  margin-top: 2%;
+  font: 100%  tahoma, Helvetica,sans-serif;
+  text-decoration:none;
+  color:    #515759  ;
+  text-align: center;
+}
+.abajoText a{
+  text-decoration:none;
+}
+.emailandpas{
+  margin-left: 17%;
+  margin-top: 5%;
+}
+.emailandpas input{
+    border-radius: 5px;
+    width: 80%;
+    height: 30px;
+    border-color:  #0bc9f4 ;
+
+
+}
+.emailandpas p{
+  font: 100%  tahoma, Helvetica,sans-serif;
+  margin-bottom: 3%;
+
+  color:    #515759  ;
+  margin-top: 2%;
+}
+.emailandpas input:focus {
+  border-radius:5px;
+
+  border: 1px solid  rgb(110, 177, 231);
+}
+.divbotones{
+  font: 100%  tahoma, Helvetica,sans-serif;
+  margin-bottom: 3%;
+  color:    #515759  ;
+  margin-top: 3%;
+  text-align: center;
+  margin-left: 3%;
+
+}
+.boton_personalizado {
+
+    text-decoration: none;
+    padding: 9px;
+    font-weight: 200;
+    font-size: 100%;
+    color: #2170b2;
+    background-color:  #fff;
+    border-radius: 6px;
+    border: 2px solid #285982;
+}
+.boton_personalizado:hover {
+    color: #fff;
+    background-color:  #3089d3 ;
+}
