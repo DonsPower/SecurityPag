@@ -22,7 +22,7 @@ require 'conexion/database.php';
            <ul>
              <li ><a href="index.html">Inicio</a></li>
              <li class="actual"><a href="inicioSesion.php">Iniciar Sesion</a></li>
-             <li><a href="#">Registro</a></li>
+             <li><a href="registro.php">Registro</a></li>
              <li><a href="sabermas.html">¿Quienes somos?</a></li>
 
            </ul>
@@ -41,20 +41,21 @@ require 'conexion/database.php';
           <p>Sign in to Your Account</p>
         </div>
         <div class="abajoText">
-          <p>Don't have an account?<a href="#">  Create one.</a></p>
+          <p>Don't have an account?<a href="registro.php">  Create one.</a></p>
         </div>
+
         <div class="emailandpas">
           <p>Email</p>
-          <input type="text" id="email" name="email" onclick="Color(this)">
+          <input type="text" id="email" name="email" placeholder="Enter email" onclick="Color(this)">
           <p>Password</p>
-          <input type="password" name="password" class="input1">
+          <input type="password" name="password" class="input1" placeholder="Enter password">
         </div>
         <div class="divbotones">
-          <input type="button" class="boton_personalizado" name="Entrar" value="Entrar">
+          <input type="button" class="boton_personalizado" name="Entrar" value="Entrar" >
 
           <input type="button" class="boton_personalizado" name="quienes" value="¿Olvidaste la contraseña?" onclick="alert('¡Pregunte al administrador!');">
         </div>
-
+        
      </div>
    </body>
  </html>

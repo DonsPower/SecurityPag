@@ -1,0 +1,60 @@
+.cuadroOscuro{
+  background-color:gray;
+  margin-top: 2%;
+  margin-left: 5%;
+  width: 80%;
+  height: 10%;
+  padding: 1.5%;
+  margin-right: 10%;
+  color: white;
+  border-radius: 10px;
+  border-bottom: #104d75  5px solid;
+
+}
+.cuadroOscurorigth{
+  background-color:gray;
+  margin-top: 2%;
+  margin-left: 15%;
+  width: 80%;
+  height: 10%;
+  padding: 1.5%;
+  margin-right: 10%;
+  color: white;
+  border-radius: 10px;
+  border-bottom: #104d75  5px solid;
+
+}
+.cuadroOscuro h1{
+  font: 200% Arial, Helvetica,sans-serif;
+  text-decoration:overline;
+  text-align-last: center;
+}
+.letras{
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 60%;
+  height: 10%;
+  padding: 1.5%;
+  margin-right: 10%;
+  color: green;
+  font: 130% Arial, Helvetica,sans-serif;
+  border-radius: 10px;
+  border-bottom: #104d75  5px solid;
+
+}
+.trabajosRealizados{
+  font: 130% Arial, Helvetica,sans-serif;
+  margin-top: 2%;
+  margin-left: 40%;
+  width: 40%;
+  height: 40%;
+  color: green;
+
+}
+.trabajosRealizados li{
+  text-decoration: none;
+  color: green;
+  display:run-in;
+  margin: 10px;
+margin-left: 60%;
+}
