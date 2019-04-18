@@ -9,7 +9,8 @@ if (!empty($_POST['name']) && !empty($_POST['first']) && !empty($_POST['email'])
   $username=mysql_real_escape_string($_POST['first']);
   $email=mysql_real_escape_string($_POST['email']);
   $password=mysql_real_escape_string($_POST['password']);
-    $sql="INSERT INTO usuario VALUES(null,'$nombre','$username','$email',SHA('$password'))";
+  //SHA(
+    $sql="INSERT INTO usuario VALUES(null,'$nombre','$username','$email','$password')";
       $ejecutar=mysql_query($sql);
      //Condicion de si se creo o no el usuario.
      if(!$ejecutar){
@@ -46,7 +47,7 @@ if (!empty($_POST['name']) && !empty($_POST['first']) && !empty($_POST['email'])
            </ul>
          </nav>
          <div id="marca">
-           <h1><span class="resaltado">DonsWeb-</span>Registro</h1>
+           <h1><span class="resaltado">MetaWars-</span>Registro</h1>
          </div>
        </div>
      </header>
@@ -60,16 +61,19 @@ if (!empty($_POST['name']) && !empty($_POST['first']) && !empty($_POST['email'])
          <div class="inicioSesionText">
            <p>Register   in to New Account</p>
          </div>
+
          <?php if(!empty($message)): ?>
-           <p align="center"> <?= $message ?></p>
+           <div class="errorRojo">
+              <p align="center"> <?= $message ?></p>
+           </div>
         <?php endif; ?>
         <form action="registro.php" method="POST">
          <div class="emailandpas">
            <p>Name</p>
-           <input type="text" name="name" id="name" placeholder="Enter your name" required autofocus
+           <input type="text" name="name" id="name" placeholder="Enter your name" maxlength="30" required autofocus
            title="Escribe tu nombre completo.">
            <p>Username</p>
-           <input type="text" name="first" class="input1" placeholder="Enter your usernamee"  required autofocus>
+           <input type="text" name="first" class="input1" placeholder="Enter your username" maxlength="20" required autofocus>
            <p>Email</p>
            <input type="email" name="email" placeholder="Enter email" required autofocus
            title="Introduce tu contraseña">

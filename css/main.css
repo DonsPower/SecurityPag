@@ -218,3 +218,31 @@ footer{
     color: #fff;
     background-color:  #3089d3 ;
 }
+.errorRojo{
+  margin-top: 1%;
+  margin-left: 16%;
+  width: 70%;
+  height: 20px;
+  border-radius: 6px;
+  background-color: rgb(244,164,96);
+}
+.errorRojo p{
+  text-align: center;
+  font-size: 1.2vw;
+  color: black;
+}
+.error404{
+  margin-top: 1%;
+  min-height:80%;
+  margin-left: 35%;
+  border-radius: 5%;
+  text-align:center;
+  width: 36%;
+  overflow: hidden;
+}
+.abajoimag{
+  margin-left: 5%;
+  margin-top: 1%;
+  text-align: center;
+  color: #000080;
+}
