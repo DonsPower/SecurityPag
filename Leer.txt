@@ -1,0 +1,6 @@
+Para poder utilizar el script se debe de crear la base de datos llamada
+donsweb
+y agregar el comando 
+use donsweb
+Se deve modificar la carpeta "conexion" para que se pueda hacer una conexion con el root 
+y la contraseña de su base de datos en los dos archivos  
