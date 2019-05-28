@@ -1,8 +1,7 @@
 <?php
-//ini_set('display_errors', 'off');
-//ini_set('display_startup_errors', 'off');
-//error_reporting(0);
-
+ini_set('display_errors', 'off');
+ini_set('display_startup_errors', 'off');
+error_reporting(0);
   session_start();
   if (isset($_SESSION['username']))
   {
@@ -18,6 +17,7 @@ require 'conexion/database2.php';
     $results = $records->fetch(PDO::FETCH_ASSOC);
     $message = '';
     $pasw=($_POST['pass']);
+    $pasw=md5($pasw);
     if (count($results) >0 && $results['password']==$pasw )
     {
       $_SESSION['username'] = $results['user'];

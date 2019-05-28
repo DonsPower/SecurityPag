@@ -1,0 +1,254 @@
+#bodyuwu{
+    background-color: darkred;
+    background-size: auto;
+    background-repeat: space;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+}
+#back{
+    padding: 1%;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: black;
+    background-color: #137510;
+    width: 70%;
+    height: 92%;
+    position:absolute;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+#CPU{
+    border-radius: 15px;
+    margin: auto;
+    border-color: blue;
+    width: 60%;
+    height: 33%;
+    border-style: dotted;
+    background-color: #1dd50f;
+}
+#jugador{
+    border-radius: 15px;
+    margin: auto;
+    border-color: blue;
+    width: 60%;
+    height: 33%;
+    border-style: dotted;
+    margin-top: 10%;
+    background-color: #1dd50f;
+}
+#mazo{
+    margin-left: 1%;
+    float: left;
+    border-style: solid;
+    width: 20%;
+    height: 97%;
+}
+#guerrero{
+    margin-left: 15%;
+    float: left;
+    border-style: solid;
+    width: 20%;
+    height: 97%;
+    border-color: red;
+}
+#defensor{
+    margin-right: 10%;
+    float: right;
+    border-style: solid;
+    width: 20%;
+    height: 97%;
+    border-color: cornflowerblue;
+}
+
+#mazo_cpu{
+    margin-left: 1%;
+    float: left;
+    border-style: solid;
+    width: 20%;
+    height: 97%;
+}
+#guerrero_cpu{
+    margin-left: 15%;
+    float: left;
+    border-style: solid;
+    width: 20%;
+    height: 97%;
+    border-color: red;
+}
+#defensor_cpu{
+    margin-right: 10%;
+    float: right;
+    border-style: solid;
+    width: 20%;
+    height: 97%;
+    border-color: cornflowerblue;
+}
+#puntuacion_cpu{
+    background-color: #1dd50f;
+    text-align: center;
+    font-size: 140%;
+    word-wrap: break-word;
+    float: left;
+    width: 15%;
+    height: 17%;
+    border-style: solid;
+    border-radius: 30px;
+    border-color: white;
+}
+#puntuacion{
+    background-color: #1dd50f;
+    font-size: 140%;
+    word-wrap: break-word;
+    text-align: center;
+    margin-top: 20%;
+    float: left;
+    bottom: auto;
+    width: 15%;
+    height: 19%;
+    border-style: solid;
+    border-radius: 30px;
+    border-color: white;
+}
+#cartas{
+    padding: 1%;
+    width: 53%;
+    height: 95%;
+    border-style: double;
+    float: right;
+    position: absolute;
+    margin-left: 80%;
+    background-color: #1dd50f;
+    border-color: greenyellow;
+    border-radius: 20px;
+}
+#cartaS{
+    float: left;
+    margin-left: 3%;
+    width: 30.3%;
+    height: 50%;
+}
+#imagen1{
+    background-size: cover;
+    background-image: url(../img/tol/defensores/1.png);
+}
+#imagen2{
+    background-size: cover;
+    background-image: url(../img/tol/defensores/2.png);
+}
+#imagen3{
+    background-size: cover;
+    background-image: url(../img/tol/defensores/3.png);
+}
+#imagen4{
+    background-size: cover;
+    background-image: url(../img/tol/defensores/4.png);
+}
+#imagen5{
+    background-size: cover;
+    background-image: url(../img/tol/defensores/5.png);
+}
+#imagen6{
+    background-size: cover;
+    background-image: url(../img/tol/defensores/6.png);
+}
+#imagen7{
+    background-size: cover;
+    background-image: url(../img/tol/defensores/7.png);
+}
+#imagen8{
+    background-size: cover;
+    background-image: url(../img/tol/defensores/8.png);
+}
+#imagen9{
+    background-size: cover;
+    background-image: url(../img/tol/defensores/9.png);
+}
+#imagen10{
+    background-size: cover;
+    background-image: url(../img/tol/defensores/10.png);
+}
+#imagen11{
+    background-size: cover;
+    background-image: url(../img/tol/guerreros/1.png);
+}
+#imagen12{
+    background-size: cover;
+    background-image: url(../img/tol/guerreros/2.png);
+}
+#imagen13{
+    background-size: cover;
+    background-image: url(../img/tol/guerreros/3.png);
+}
+#imagen14{
+    background-size: cover;
+    background-image: url(../img/tol/guerreros/4.png);
+}
+#imagen15{
+    background-size: cover;
+    background-image: url(../img/tol/guerreros/5.png);
+}
+#imagen16{
+    background-size: cover;
+    background-image: url(../img/tol/guerreros/6.PNG);
+}
+#imagen17{
+    background-size: cover;
+    background-image: url(../img/tol/guerreros/7.png);
+}
+#imagen18{
+    background-size: cover;
+    background-image: url(../img/tol/guerreros/8.png);
+}
+#imagen19{
+    background-size: cover;
+    background-image: url(../img/tol/guerreros/9.png);
+}
+#imagen20{
+    background-size: cover;
+    background-image: url(../img/tol/guerreros/10.PNG);
+}
+.backCard{
+    width: 100%;
+    height: 100%;
+}
+#poder{
+    font-size: 110%;
+    margin-left: 50%;
+    align-content: center;
+}
+#power_cpu{
+    margin-left: 37%;
+    width: 30%;
+    border-radius: 40px;
+    background-color:  #137510;
+    font-size: 210%;
+    text-align: center;
+    align-content: center;
+}
+#power{
+    margin-left: 37%;
+    width: 30%;
+    border-radius: 40px;
+    background-color:  #137510;
+    font-size: 210%;
+    text-align: center;
+    align-content: center;
+}
+.btnjuego1: {
+  margin-left: 50%;
+  width: 40%;
+  height: 40%;
+  background-color: white;
+}
+button{
+    width: 100%;
+    height: 100%;
+}
+#res{
+  font-size: 250%;
+  background-color: red;
+  height: 100%;
+}

@@ -2,7 +2,7 @@
 
   session_start();
   require 'conexion/database2.php';
-
+  //Comprueba si una variable esta definida o no
   if (isset($_SESSION['username']))
   {
     $records = $conn->prepare('SELECT * FROM usuario WHERE user = :users');
@@ -25,6 +25,8 @@
     <title>Bienvenido | DonsWeb</title>
     <!--Apartado para los CSS-->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pagInicio.css">
+    <link rel="stylesheet" href="css/boton.css">
   </head>
   <body>
     <?php if(!empty($user)): ?>
@@ -41,10 +43,91 @@
             </ul>
           </nav>
         </div>
+      </header>
+      <div class="imagenSupUser">
 
-  <?php else: ?>
-    <h1>ERROR</h1><li><a href="logout.php">Cerrar sesion	</a></li>
+        <div class="divderUser">
+          <form class="" action="src/test.php" method="post">
+            <button   type="submit" class="id" >
+              <div class="cuadrito2">
+              <p>Apuntar Tarea</p>
+              </div>
+              <br>
+              <img src="img/menu/test.png" alt="
+               texto alternativo" width="230" height="230">
+            </button>
+          </form>
+        </div>
+        <div class="divmidUser">
+          <form class="" action="src/jugar/historia.php" method="post">
+            <button   type="submit" class="id" >
+              <div class="cuadrito2">
+              <p>Jugar</p>
+              </div>
+              <br>
+              <img src="img/menu/jugar.png" alt="texto alternativo" width="230" height="230">
+            </button>
+          </form>
+        </div>
+        <div class="divizqUser">
+          <form class="" action="src/test2.php" method="post">
+            <button   type="submit" class="id" >
+              <div class="cuadrito2">
+              <p>Ver tareas</p>
+              </div>
+              <br>
+              <img src="img/menu/tienda.png" alt=t"exto alternativo" width="230" height="230">
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="eresProfe">
+        <form class="" action="src/scoreboard.php" method="post">
+          <button   type="submit" class="id" >
+            <p>Scoreboard</p>
+            <br>
+
+          </button>
+        </form>
+
+      </div>
+
+
+
+      <footer class="center">
+        <p>DonsInc | 2018</p>
+      </footer>
+
+      <?php else: ?>
+  <header>
+    <div class="contenedor">
+      <div id="marca">
+        <h1><span class="resaltado">MetaWars</span> Rutas Metabolicas</h1>
+        </div>
+      </div>
+    </header>
+        <section id="boletin">
+              <div class="contenedor"></div>
+        </section>
+        <div class="divSupLogin">
+        <div class="divizqlogin">
+          <div class="centrado">
+              <a class="boton_personalizado"  href="index.html">Registro</a>
+          </div>
+        </div>
+        <div class="divmidlogin"></div>
+        <div class="divderlogin">
+          <div class="centradoder">
+              <a class="boton_personalizado" href="index.html">Iniciarsesion</a>
+          </div>
+        </div>
+        </div>
+
+          <footer class="center">
+            <p>DonsInc | 2018</p>
+          </footer>
 
 <?php endif; ?>
+
   </body>
 </html>

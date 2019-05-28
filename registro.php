@@ -9,6 +9,7 @@ if (!empty($_POST['name']) && !empty($_POST['first']) && !empty($_POST['email'])
   $username=mysql_real_escape_string($_POST['first']);
   $email=mysql_real_escape_string($_POST['email']);
   $password=mysql_real_escape_string($_POST['password']);
+  $password=md5($password);
   //SHA(
     $sql="INSERT INTO usuario VALUES(null,'$nombre','$username','$email','$password')";
       $ejecutar=mysql_query($sql);

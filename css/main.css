@@ -28,8 +28,9 @@ header{
   background: #104d75;
   color:#ffffff;
   padding-top:30px;
+  width: 100%;
   min-height:70px;
-  border-bottom: #1dd50d  5px solid;
+  border-bottom: #1dd50d  0px solid;
 }
 
 header a{
@@ -37,12 +38,14 @@ header a{
   text-decoration:none;
   text-transform: uppercase;
   font-size:100%;
+
 }
 
 header li{
   float:left;
   display:inline;
   padding: 0 20px 0 20px;
+
 }
 
 header #marca{
@@ -52,16 +55,19 @@ header #marca{
 
 header #marca h1{
   margin:0;
+
 }
 
 header nav{
   float:right;
   margin-top:1%;
+
 }
 
 header .resaltado, header .actual a{
   color:    #1dd50d ;
   font-weight:bold;
+  /*position: fixed;*/
 }
 
 header a:hover{
@@ -180,7 +186,6 @@ footer{
     height: 30px;
     border-color:  #0bc9f4 ;
     text-indent: 5%;
-
 }
 .emailandpas p{
   font: 100%  tahoma, Helvetica,sans-serif;
