@@ -1,6 +1,14 @@
-<?php
+<?php  error_reporting(0);
+//Iniciamos secion.
+ini_set('session.use_only_cookies', true);
+session_start();
 
-  session_start();
+  $salt = 'SHIFLETT';
+  $identifier = md5($salt . md5($username . $salt));
+  $token = md5(uniqid(rand(), TRUE));
+  $timeout = time() + 60 * 60 * 24 * 7;
+  setcookie('auth', "$identifier:$token", $timeout);
+
   require 'conexion/database2.php';
   //Comprueba si una variable esta definida o no
   if (isset($_SESSION['username']))
@@ -81,47 +89,26 @@
           </form>
         </div>
       </div>
-      <div class="eresProfe">
-        <form class="" action="src/scoreboard.php" method="post">
-          <button   type="submit" class="id" >
-            <p>Scoreboard</p>
-            <br>
-
-          </button>
-        </form>
-
-      </div>
-
-
-
       <footer class="center">
         <p>DonsInc | 2018</p>
       </footer>
 
       <?php else: ?>
-  <header>
-    <div class="contenedor">
-      <div id="marca">
-        <h1><span class="resaltado">MetaWars</span> Rutas Metabolicas</h1>
-        </div>
-      </div>
-    </header>
-        <section id="boletin">
-              <div class="contenedor"></div>
-        </section>
-        <div class="divSupLogin">
-        <div class="divizqlogin">
-          <div class="centrado">
-              <a class="boton_personalizado"  href="index.html">Registro</a>
+        <header>
+          <div class="contenedor">
+            <div id="marca">
+              <h1><span class="resaltado">Bienvenido</span>: <?= $user['user']; ?></h1>
+            </div>
+            <nav>
+              <ul>
+                <li>Te has conectado correctamente.</li>
+                <li><a href="logout.php">Cerrar sesion	</a></li>
+
+              </ul>
+            </nav>
           </div>
-        </div>
-        <div class="divmidlogin"></div>
-        <div class="divderlogin">
-          <div class="centradoder">
-              <a class="boton_personalizado" href="index.html">Iniciarsesion</a>
-          </div>
-        </div>
-        </div>
+        </header>
+
 
           <footer class="center">
             <p>DonsInc | 2018</p>

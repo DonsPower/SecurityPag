@@ -1,8 +1,17 @@
 <?php
-ini_set('display_errors', 'off');
-ini_set('display_startup_errors', 'off');
-error_reporting(0);
-  session_start();
+
+  error_reporting(0);
+//Iniciamos secion.
+ini_set('session.use_only_cookies', true);
+session_start();
+  
+  $salt = 'SHIFLETT';
+  $identifier = md5($salt . md5($username . $salt));
+  $token = md5(uniqid(rand(), TRUE));
+  $timeout = time() + 60 * 60 * 24 * 7;
+  setcookie('auth', "$identifier:$token", $timeout);
+
+
   if (isset($_SESSION['username']))
   {
     header('Location: intropage.php');
@@ -11,13 +20,28 @@ require 'conexion/database2.php';
   if (!empty($_POST['pass']) && !empty($_POST['username']))
   {
     $usernam=mysql_real_escape_string($_POST['username']);
+    $usernam=strip_tags($usernam);
+    $usernam = str_replace("'", "", $usernam);
+    $usernam = str_replace('"', '', $usernam);
+    #SETEO DE COOKIE
+    $salt = 'SHIFLETT';
+    $identifier = md5($salt . md5($username . $salt));
+    $token = md5(uniqid(rand(), TRUE));
+    $timeout = time() + 30 * 30 * 24 * 7;
+
+    setcookie('auth', "$identifier:$token", $timeout);
+
     $records = $conn->prepare('SELECT * FROM usuario WHERE user = :users');
     $records->bindParam(':users', $usernam);
     $records->execute();
     $results = $records->fetch(PDO::FETCH_ASSOC);
     $message = '';
-    $pasw=($_POST['pass']);
-    $pasw=md5($pasw);
+    $pasw=mysql_real_escape_string($_POST['pass']);
+    $pasw=strip_tags($pasw);
+    $pasw = str_replace("'", "",$pasw);
+    $pasw = str_replace('"', '', $pasw);
+    $a="clave_prueba";
+    $pasw=md5($a.(md5($pasw)));
     if (count($results) >0 && $results['password']==$pasw )
     {
       $_SESSION['username'] = $results['user'];

@@ -32,7 +32,7 @@
       <nav>
         <ul>
           <li>Te has conectado correctamente.</li>
-          <li><a href="../logout.php">Cerrar sesion	</a></li>
+          <li><a href="../../logout.php">Cerrar sesion	</a></li>
         </ul>
       </nav>
     </div>
@@ -43,6 +43,16 @@
 
     </div>
   	</section>
+    <div class="eresProfe">
+      <form class="" action="manual.html" method="post">
+        <button   type="submit" class="id" >
+          <p>¿Cómo se juega?</p>
+          <br>
+
+        </button>
+      </form>
+
+    </div>
  	<div class="primer">
   		<div class = "second">
         <br>
@@ -55,6 +65,7 @@
 
   			</div>
   		</div>
+
   	</div>
   	<section id="boletin">
     <div class="contenedor">

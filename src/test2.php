@@ -1,5 +1,15 @@
 <?php
-  	session_start();
+error_reporting(0);
+//Iniciamos secion.
+ini_set('session.use_only_cookies', true);
+session_start();
+
+$salt = 'SHIFLETT';
+$identifier = md5($salt . md5($username . $salt));
+$token = md5(uniqid(rand(), TRUE));
+$timeout = time() + 60 * 60 * 24 * 7;
+setcookie('auth', "$identifier:$token", $timeout);
+
   	require '../conexion/database2.php';
   	if (isset($_SESSION['username']))
   	{
@@ -89,8 +99,8 @@
         } else {
 
         ?>
-        <h2>No se encuentra ninguna tarea activa aun.</h2>
-        <h3>Porfavor ir a la parte de almacenar tarea para guardar una.</h3>
+        <h2>No se encuentra ninguna tarea activa.</h2>
+        <h3>Porfavor ir a la parte de "almacenar tarea" para guardar una.</h3>
         <br><br><br>
         <a href="../intropage.php" class="boton_personalizado" align="center" >Atras</a>
         <?php

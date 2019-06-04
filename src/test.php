@@ -1,5 +1,15 @@
 <?php
-  	session_start();
+    error_reporting(0);
+    //Iniciamos secion.
+    ini_set('session.use_only_cookies', true);
+    session_start();
+
+    $salt = 'SHIFLETT';
+    $identifier = md5($salt . md5($username . $salt));
+    $token = md5(uniqid(rand(), TRUE));
+    $timeout = time() + 60 * 60 * 24 * 7;
+    setcookie('auth', "$identifier:$token", $timeout);
+
   	require '../conexion/database2.php';
   	if (isset($_SESSION['username']))
   	{
@@ -22,8 +32,15 @@
     //Verificamos que los campos no esten vacios.
   if (!empty($_POST['nom_materia']) && !empty($_POST['fecha_entrega']) && !empty($_POST['envio_tarea'])) {
     $nomTarea= mysql_real_escape_string($_POST['nom_materia']);
+    $nomTarea=strip_tags($nomTarea);
+    $nomTarea = str_replace("'", "", $nomTarea);
+    $nomTarea = str_replace('"', '', $nomTarea);
     $fechaEnt=mysql_real_escape_string($_POST['fecha_entrega']);
+
     $envioTarea=mysql_real_escape_string($_POST['envio_tarea']);
+    $envioTarea=strip_tags($envioTarea);
+    $envioTarea = str_replace("'", "", $envioTarea);
+    $envioTarea= str_replace('"', '', $envioTarea);
     //SHA(
      $sql="INSERT INTO homework VALUES(null,'$aloja','$nomTarea','$fechaEnt','$envioTarea')";
     $ejecutar=mysql_query($sql);
@@ -98,7 +115,7 @@
         <input type="text" name="envio_tarea" style="WIDTH: 428px; HEIGHT: 70px" >
         <br><br>
 
-        <input type="submit" class="boton_personalizado" name="envio" value="Enviar">
+        <input type="submit" class="boton_personalizado" name="envio" value="Guardar">
         <input type="reset" class="boton_personalizado" name="" value="Borrar">
 
       </form>

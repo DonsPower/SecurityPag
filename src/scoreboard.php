@@ -28,7 +28,16 @@
     </div>
   </header>
 <?php
-  session_start();
+error_reporting(0);
+//Iniciamos secion.
+ini_set('session.use_only_cookies', true);
+session_start();
+
+$salt = 'SHIFLETT';
+$identifier = md5($salt . md5($username . $salt));
+$token = md5(uniqid(rand(), TRUE));
+$timeout = time() + 60 * 60 * 24 * 7;
+setcookie('auth', "$identifier:$token", $timeout);
   $message = '';
   require '../conexion/database2.php';
 ?>
@@ -40,7 +49,7 @@
   <table  class="table table-hover table-light">
 	<thead >
     <tr>
-  
+
       <th >ID</th>
       <th>NOMBRE</th>
       <th></th>
